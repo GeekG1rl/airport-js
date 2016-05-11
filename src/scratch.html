@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  </head>
+​
+  <script>
+​
+function Dog(name, breed) {
+  this.name = name;
+  this.breed = breed;
+};
+​
+Dog.prototype.numberOfLegs = 4;
+Dog.prototype.bark = function() {
+  return this.name + ' the ' + this.breed + ' says Woof!'
+}
+​
+var dog = new Dog('Fred', 'Labrador');
+console.log(dog.name + ' has ' + dog.numberOfLegs + ' legs');
+console.log(dog.bark());
+​
+dog.name = 'Barney';
+console.log(dog.bark());
+​
+  </script>
+​
+  <body>
+    <h1 id="heading">JavaScript Sandbox</h1>
+    <p class="language_name">
+    Use this file to test your <span class="language_name">JavaScript</span>
+    </p>
+    <form id="test_form">
+      <input type="text" name="some_text">
+      <input type="submit">
+    </form>
+    <button id="a_button">A Button!</button>
+  </body>
+​
+</html>
